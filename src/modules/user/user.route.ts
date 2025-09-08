@@ -6,7 +6,7 @@ import { validateRequest } from "../../middlewares/validateMiddleware";
 const router = Router()
 
 router.post(
-  "/register",  validateRequest(createUserZodSchema),
+  "/signup",  validateRequest(createUserZodSchema),
   UserControllers.createUser);
 
 

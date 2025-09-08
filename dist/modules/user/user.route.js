@@ -6,5 +6,5 @@ const user_controller_1 = require("./user.controller");
 const userValidation_1 = require("./userValidation");
 const validateMiddleware_1 = require("../../middlewares/validateMiddleware");
 const router = (0, express_1.Router)();
-router.post("/register", (0, validateMiddleware_1.validateRequest)(userValidation_1.createUserZodSchema), user_controller_1.UserControllers.createUser);
+router.post("/signup", (0, validateMiddleware_1.validateRequest)(userValidation_1.createUserZodSchema), user_controller_1.UserControllers.createUser);
 exports.userRoutes = router;

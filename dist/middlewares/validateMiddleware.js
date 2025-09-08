@@ -13,7 +13,7 @@ exports.validateRequest = void 0;
 const validateRequest = (zodSchema) => (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         req.body = yield zodSchema.parseAsync(req.body);
-        console.log(req.body);
+        //   console.log(req.body)
         next();
     }
     catch (error) {

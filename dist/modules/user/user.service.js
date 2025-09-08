@@ -36,7 +36,6 @@ const createUser = (payload) => __awaiter(void 0, void 0, void 0, function* () {
         throw new appError_1.default(http_status_codes_1.default.BAD_REQUEST, "User already exist");
     }
     const hashedPassword = yield bcryptjs_1.default.hash(password, Number(env_1.envVars.BCRYPT_SALT_ROUND));
-    //   const isPassWordMatch = await  bycriptjs.compare("123Riya#", hashedPassword)
     const authProvider = {
         provider: "credentials",
         providerId: email,

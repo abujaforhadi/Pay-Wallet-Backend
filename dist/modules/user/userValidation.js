@@ -63,7 +63,6 @@ exports.updateUserZodSchema = zod_1.default.object({
     })
         .optional(),
     role: zod_1.default
-        // .enum(["ADMIN", "GUIDE", "USER", "SUPER_ADMIN"])
         .enum(Object.values(user_interface_1.Role))
         .optional(),
     isActive: zod_1.default
